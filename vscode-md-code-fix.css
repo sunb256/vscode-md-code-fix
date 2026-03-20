@@ -1,0 +1,22 @@
+/* fenced code block の外枠だけ */
+.markdown-body pre,
+.vscode-body pre,
+pre {
+  background-color: #f6f8fa !important;
+}
+
+/* 中の code 自体は透明にして、トークン色は触らない */
+.markdown-body pre code,
+.vscode-body pre code,
+pre code {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* インラインコードは触らない */
+.markdown-body :not(pre) > code,
+.vscode-body :not(pre) > code,
+:not(pre) > code {
+  background: inherit !important;
+  color: inherit !important;
+}
